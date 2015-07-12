@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+<div class="container">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+<h1 class="no-print">Honey Badger don't care !</h1>
+
+<img src="img/badger.jpg" id="badger" class="no-print" width="320" height="256">
+	
+<div class="no-print">
+  <div data-handler="persons">
+	<input class="input-file" type="file" accept=".csv,.xls">
+	<div id="input-persons" class="input-drop">Matricules</div>
+  </div>
+  
+  <div data-handler="absences">
+	<input class="input-file" type="file" accept=".csv,.xls">
+	<div id="input-persons" class="input-drop">Absences</div>
+  </div>
+  
+  <div data-handler="badger">
+	<input class="input-file" type="file" accept=".csv,.xls">
+	<div id="input-badger" class="input-drop">Badgeage</div>
+  </div>
+</div>
+
+<div id="persons-wrapper">
+  <table id="persons">
+    <colgroup>
+	  <col style="width: 20%;">
+	  <col style="width: 40%;">
+	  <col style="width: 40%;">
+	</colgroup>
+	<thead>
+	<tr>
+	  <th>Mat</td>
+	  <th>Prénom</td>
+	  <th>Nom</td>
+	</tr>
+	</thead>
+	<tbody>
+	</tbody>
+  </table>
+</div>
+
+<script id="person-template" type="x-tmpl-mustache">
+<tr data-target="#p{{ id }}">
+  <td data-sort='{{ institution }}'>{{ id }}</td>
+  <td>{{ firstName }}</td>
+  <td>{{ lastName }}</td>
+</tr>
+</script>
+
+<script src="js/vendor/jquery-2.1.4.min.js"></script>
+<script src="js/vendor/mustache.min.js"></script>
+<script src="js/vendor/papaparse.min.js"></script>
+<script src="js/vendor/tablesort.min.js"></script>
+
+<script src="js/plugins.js"></script>
+
+<script src="js/utils.js"></script>
+<script src="js/persons.js"></script>
+<script src="js/main.js"></script>
+
+    </body>
+</html>

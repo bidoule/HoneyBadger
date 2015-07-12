@@ -1,0 +1,483 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+* {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+}
+h1, h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 30px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container {
+  width: 970px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: 400px;
+  margin-top: 15px;
+}
+
+/* Honey Badger */
+
+@keyframes ksss {
+	0% { transform: translate(2px, 1px) rotate(0deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) rotate(1deg); }
+	30% { transform: translate(0px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(2px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(2px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+#badger {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+#badger:hover {
+	animation-name: ksss;
+	animation-duration: 0.8s;
+	transform-origin:50% 50%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+/* Input buttons */
+
+.input-file {
+  display: none;
+}
+.input-drop {
+  margin: 5px;
+  display: inline-block;
+  font-size: 20px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 3px dotted #FFA500;
+  transition: border-color 0.3s;
+}
+.input-drop:hover, 
+.input-drop:focus,
+.drag-enter {
+  border: 3px dotted #E56717;
+  cursor: pointer;
+}
+.drop-wait {
+  cursor: wait;
+  border: 3px dotted #31708f;
+}
+
+/* Persons */
+#persons-wrapper {
+  overflow-y: scroll;
+  max-height: 100%;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#persons {
+  border-collapse: separate;
+  border-spacing: 2px;
+  width: 350px;
+}
+#persons th {
+  cursor:pointer;
+  padding: 8px;
+  font-weight: bold;
+  text-align: left;
+  background-color: #e6eeee;
+}
+#persons td {
+  padding: 2px;
+  cursor:pointer;
+}
+#persons tr:hover td {
+  background-color: #eee;
+}
+
+#persons th::selection {
+  background:transparent;
+}
+#persons th:after {
+  content: '';
+  float: right;
+  margin-top: 7px;
+  margin-left: 10px;
+  border-width: 0 4px 4px;
+  border-style: solid;
+  border-color: #404040 transparent;
+  visibility: hidden;
+}
+#persons th:hover:after {
+  visibility:visible;
+}
+#persons .sort-up:after,
+#persons .sort-down:after,
+#persons .sort-down:hover:after {
+  visibility:visible;
+  opacity:0.4;
+}
+#persons .sort-up:after {
+  border-bottom:none;
+  border-width:4px 4px 0;
+}
+
+
+
+
+
+.alerts {
+  margin: 20px 0;
+}
+
+.alerts thead {
+  border-bottom: 2px solid #eee;
+  margin-bottom: 2px;
+}
+
+.alerts td {
+  padding: 3px 15px;
+}
+
+#errors {
+	page-break-after: always
+}
+
+.alert {
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+
+
+
+#main table {
+	page-break-after: always
+}
+
+#main h4, #main h5 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+#main h4 {
+  font-size: 16px;
+}
+
+@media print {
+	.no-print {
+	  display: none;
+	}
+}
+
+.new-week td {
+    padding-top: 15px;
+}
+.date td {
+    padding: 2px 5px;
+}
+.date:nth-child(even) {
+    background-color: #eee;
+}
+
+.in-out {
+    width: 100px;
+    display: inline-block;
+}
+
+#main th {
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+.overtime {
+    padding: 5px;
+}
+
+.overtime li {
+    padding: 2px 20px;
+    border-radius: 3px;
+    margin-top: 2px;
+}
+.overtime .minus {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.overtime .perfect {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+.overtime .normal {
+  background-color: #efefef;
+  border-color: #eeeeee;
+}
+.overtime .low {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+.overtime .medium {
+  color: #9a593f;
+  background-color: #f7ebe1;
+  border-color: #f3dccf;
+}
+.overtime .high {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+
+#helper {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #eee;
+  list-style-type: none;
+  padding: 2px 5px;
+  border-radius: 5px;
+  overflow-y: scroll;
+  height: 400px;
+}
+
+#helper a {
+  display: block;
+  padding: 2px 10px;
+  margin: 3px 0;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+#helper a:hover {
+  background-color: #ddd;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
